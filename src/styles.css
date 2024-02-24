@@ -1,77 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #F1EEE9;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F1EEE9;
+  margin: 0;
+  padding: 0;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F1EEE9;
+  width: 300px;
+  margin: 20px auto;
+  padding: 30px; /* Reduced padding for better appearance */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #F1EEE9;
-    width: 300px;
-    margin: 20px auto;
-    padding: 90px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  .section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    justify-content: space-between; /* Space between items */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align section contents to the left */
+  margin-bottom: 20px;
   }
 
-  .section.coffee,
-  .section.dessert {
-      justify-content: flex-end; /* Align items to the right for coffee and dessert sections */
+.section.coffee,
+.section.dessert {
+  align-items: flex-end; /* Align coffee and dessert sections to the right */
   }
 
 .section.tea {
-    justify-content: space-between; /* Spacing between items for tea section */
-    align-items: center; /* Align items to the center for tea section */
+  align-items: flex-start; /* Align tea section to the left */
 }
 
-  .section-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    background-color: #242423; /* Rectangle box color */
-    color: #F1EEE9;
-    border-radius: 10px; /* Rounded corners */
-    display: inline-block; /* Ensure the box wraps around the text */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #242423;
+  color: #F1EEE9;
+  border-radius: 10px;
   }
   .item-container {
-    background-color: #F1EEE9;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px rgba(36, 36, 35, 0.2);
-    border: 1px solid rgb(106, 106, 102); /* Border color */
-    margin-right: auto;
+  background-color: #F1EEE9;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(36, 36, 35, 0.2);
+  border: 1px solid rgb(106, 106, 102);
+  margin-top: 5px;
 }
   .item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
   }
+
   .item-name {
-    flex: 1;
+  flex: 1;
   }
   .item-price {
-    flex-shrink: 0;
-    color: #888;
+  flex-shrink: 0;
+  color: #888;
   }
 
-  .section-image {
-    max-width: 100px; /* Adjust size as needed */
-    margin: 0 10px; /* Adjust spacing as needed */
-}
+.section-image {
+  max-width: 100px; /* Reduced width to make it more noticeable */
+  margin: 0 10px;
+  }
 
-.left {
+  .section.coffee .section-image.left {
+    order: -1; /* Move coffee image to the left */
+  }
+  
+  .section.dessert .section-image.left {
+    order: -1; /* Move dessert image to the left */
+  }
+  
+  .left {
     order: -1; /* Move image to the left */
-}
-
-.right {
-  order: 1; /* Move image to the right */
-}
+  }
+  
+  .right {
+    order: 1; /* Move image to the right */
+  }
